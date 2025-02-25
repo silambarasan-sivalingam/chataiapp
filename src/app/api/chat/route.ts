@@ -2,9 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 
 const API_URL = "https://aiproject-uwohx.eastus.inference.ml.azure.com/score";
 const API_KEY = process.env.AZURE_AI_API_KEY;
-const DEPLOYMENT_NAME = "aiproject-uwohx-3";
+const DEPLOYMENT_NAME = "aiproject-uwohx-5";
 
 export async function POST(req: NextRequest) {
+
   if (!API_KEY) {
     console.error("API key is missing");
     return NextResponse.json({ error: "API key is missing" }, { status: 500 });
